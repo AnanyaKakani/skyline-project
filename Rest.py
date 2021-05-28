@@ -30,3 +30,4 @@ def load(url):
     resturl = base+url+'.json'
     r = requests.get(resturl)
     return json.loads(r.text)
+#end of the file
