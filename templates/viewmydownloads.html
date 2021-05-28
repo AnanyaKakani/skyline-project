@@ -1,0 +1,35 @@
+{% include 'uhead.html'%}
+	<center><h1> Downloded File Details</h1></center>
+<body>
+
+
+<div class="container text-dark">
+ <table class="table" border="1">
+    <thead class="thead-dark">
+      <tr>
+        <th>File Id</th>
+              <th>File Name</th>
+            <th>Owner Name</th>
+			<th>Datee </th>
+
+
+
+        </thead>
+</div>
+{% for user in mydetails %}
+
+	<tbody>
+		<tr>
+		   <td>{{user[0]}}</td>
+		   <td>{{user[1]}}</td>
+            <td>{{user[3]}}</td>
+			<td>{{user[4]}}</td>
+
+		</tr>
+	</tbody>
+
+  {% endfor %}
+
+
+</table>
+</center>

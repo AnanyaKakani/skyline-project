@@ -1,0 +1,43 @@
+{% include 'shead.html'%}
+	<center><h1> Requested File Details</h1></center>
+<body>
+
+
+<div class="container text-dark">
+ <table class="table" border="1">
+    <thead class="thead-dark">
+      <tr>
+        <th>File Id</th>
+              <th>Patient Name</th>
+            <th>Useranme</th>
+			<th>Datee </th>
+    <th>Owner Name </th>
+           <th>ServerStatus </th>
+      <th>Action</th>
+
+
+        </thead>
+</div>
+{% for user in userDetails %}
+
+	<tbody>
+		<tr>
+		   <td>{{user[2]}}</td>
+		   <td>{{user[1]}}</td>
+			<td>{{user[3]}}</td>
+			<td>{{user[5]}}</td>
+            	<td>{{user[4]}}</td>
+            <td>{{user[6]}}</td>
+             {%if user[6] == 'pending'%}
+                <td><a href="/acceptrequest?id={{user[0]}}&reqby={{user[3]}}&pid={{user[2]}}"><button class="btn btn-primary">Accept</button></a> </td>
+            {%else%}
+                <td>Request Accepted</td>
+            {%endif%}
+        </tr>
+	</tbody>
+
+  {% endfor %}
+
+
+</table>
+</center>

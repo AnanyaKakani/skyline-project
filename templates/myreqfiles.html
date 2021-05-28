@@ -1,0 +1,42 @@
+{% include 'uhead.html'%}
+	<center><h1> MyRequested File Details</h1></center>
+<body>
+
+
+<div class="container text-dark">
+ <table class="table" border="1">
+    <thead class="thead-dark">
+      <tr>
+        <th>File Id</th>
+              <th>File Name</th>
+            <th>Useranme</th>
+			<th>Datee </th>
+    <th>Owner Name </th>
+           <th>ServerStatus </th>
+      <th>Download</th>
+
+
+        </thead>
+</div>
+{% for user in userDetails %}
+
+	<tbody>
+		<tr>
+		   <td>{{user[2]}}</td>
+		   <td>{{user[1]}}</td>
+			<td>{{user[3]}}</td>
+			<td>{{user[5]}}</td>
+            	<td>{{user[4]}}</td>
+            <td>{{user[6]}}</td>
+ {%if user[6] == 'accept'%}
+                <td><a href="/uviewpatientdel?pid={{user[2]}}"><button class="btn btn-primary">View patient Details</button></a> </td>
+            {%else%}
+                <td>Request Pending</td>
+            {%endif%}        </tr>
+	</tbody>
+
+  {% endfor %}
+
+
+</table>
+</center>

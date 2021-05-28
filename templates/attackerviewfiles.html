@@ -1,0 +1,36 @@
+
+{% include "mainhead.html" %}<br><br>
+
+<head>
+<style>
+
+</style>
+</head>
+
+<body>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12" >
+    <div class="container">
+<H2>Attack Details  Here</H2>
+        {%for files in userDetails%}
+  <form action="/attackerviewfiles1">
+            <input type="hidden" class="form-control"  placeholder="Enter FileName" name="id" value="{{files[0]}}">
+
+    <div class="form-group">
+      <label for="username">FileName:</label>
+      <input type="text" class="form-control" id="username" placeholder="Enter FileName" name="fname" value="{{files[1]}}">
+    </div>
+
+          <div class="form-group">
+      <label >Patient Details:</label>
+        <textarea rows="5" cols="" name="filedate" required placeholder="Enter FileDate Here" class="form-control" >{{files[12]}}</textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Download</button>
+  </form>
+        {%endfor%}
+</div>
+</div>
+</div>
+</div>>
+</body>

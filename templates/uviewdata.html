@@ -1,0 +1,37 @@
+{% include 'uhead.html'%}
+	<center><h1>View User Details</h1></center>
+<body>
+
+
+<div class="container text-dark">
+ <table class="table" border="1">
+    <thead class="thead-dark">
+      <tr>
+
+          <th>Data</th>
+    <th>Download</th>
+        </thead>
+</div>
+{% for user in pdel %}
+
+	<tbody>
+		<tr>
+
+           <td>{{user[12]}}</td>
+
+            <td><a href="/download1?id={{user[0]}}"><button>download</button></a> </td>
+
+
+
+
+
+
+
+		</tr>
+	</tbody>
+
+  {% endfor %}
+
+
+</table>
+</center>

@@ -1,0 +1,82 @@
+{% include "ohead.html" %}
+<head>
+<style>
+body {
+}
+</style>
+</head>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12" >
+    <div class="container">
+        <h2>Upload Patient Details Here</h2>
+
+  <form action="/uploadpatient1"   onsubmit="return validate()" name="myform" enctype="multipart/form-data" method="post">
+    <div class="form-group">
+      <label for="name">Patient Name:</label>
+      <input type="text" class="form-control" id="name" placeholder="Enter Patient name" name="pname" required>
+    </div>
+
+     <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" required>
+    </div>
+    <div class="form-group">
+      <label for="phone">Phone:</label>
+      <input type="number" class="form-control" id="phone"  placeholder="Enter phnonenumber" name="phone" required>
+    </div>
+ <div class="form-group">
+      <label for="phone">Address:</label>
+     <textarea class="form-control" name="address"></textarea>
+    </div>
+<div class="form-group">
+      <label for="phone">DOB:</label>
+      <input type="date" class="form-control" id=""   name="dob" required>
+    </div>
+      <div class="form-group">
+      <label for="phone">Hospital Name:</label>
+      <input type="text" class="form-control"   placeholder="Enter Hospital Name" name="hname" required>
+    </div>
+       <div class="form-group">
+      <label for="phone">Patient Blood Group:</label>
+           <select class="form-control" name="bloodgroup">
+               <option value="a+">A+</option>
+               <option value="a-">A-</option>
+               <option value="b+">B+</option>
+               <option value="b-">B-</option>
+               <option value="AB+">AB+</option>
+               <option value="ab-">AB-</option>
+               <option value="o+">O+</option>
+               <option value="o-">O-</option>
+
+           </select>
+    </div>
+      <div class="form-group">
+      <label for="phone">Disease Name:</label>
+      <input type="text" class="form-control"   placeholder="Enter Disease Name" name="dname" required>
+    </div>
+      <div class="form-group">
+      <label for="phone">Disease Symptom:</label>
+      <input type="text" class="form-control"   placeholder="Enter Disease Symptom" name="dsym" required>
+    </div>
+       <div class="form-group">
+      <label for="phone">age:</label>
+      <input type="number" class="form-control"   placeholder="Enter Patient Age" name="age" required>
+    </div>
+       <div class="form-group">
+      <label >Upload Report:</label>
+      <input type="file" class="form-control"   name="myfile">
+    </div>
+       <div class="form-group">
+      <label >Image:</label>
+      <input type="file" class="form-control"   name="file">
+    </div>
+    <div>
+      <button type="submit" class="btn btn-primary" value="Submit">Submit</button>
+
+    <button type="reset" class="btn btn-dark" value="Clear">Clear</button>
+    </div>
+  </form>
+</div>
+</div>
+</div>

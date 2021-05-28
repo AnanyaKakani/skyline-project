@@ -1,0 +1,46 @@
+{% include 'title.html' %}
+
+<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+  <!-- Brand -->
+  <!-- Dropdown -->
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop1" data-toggle="dropdown">
+        AUTHORIZE
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="/verifyowners">OWNERS</a>
+        <a class="dropdown-item" href="/verifyusers">USERS</a>
+      </div>
+    </li>
+
+    <!-- Dropdown -->
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+        VIEW DETAILS
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="/aviewpatient">PATIENTS</a>
+        <a class="dropdown-item" href="/viewtransaction">TRANSACTION</a>
+      </div>
+    </li>
+     <li class="nav-item">
+      <a class="nav-link" href="/aviewreq">Secret key permission </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="/viewAttackedFiles">Attacker details </a>
+    </li>
+    <!-- Dropdown -->
+    <li class="nav-item dropdown">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop2" data-toggle="dropdown">
+        GRAPH
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="/samedesease">Patients with same disease</a>
+        <a class="dropdown-item" href="/accesschart">Doctors accessing the patient details</a>
+      </div>
+    </li>
+   <li class="nav-item">
+      <a class="nav-link" href="/">Logout</a>
+    </li>
+  </ul>
+</nav>

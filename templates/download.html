@@ -1,0 +1,28 @@
+{%include 'uhead.html'%}<br><br>
+<head>
+<style>
+body {
+
+}
+</style>
+</head>
+<body>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-12" >
+    <div class="container">
+<h2>Key Verification</h2>
+  <form action="/uviewdata"  >
+      <input type="hidden" value="{{fileid}}" name="fileid">
+    <div class="form-group">
+      <label for="key"><h5>Key:</h5></label>
+      <input type="text" class="form-control" id="key" placeholder="Enter key Here" name="key">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+</div>
+
+  </div></div></body>
+

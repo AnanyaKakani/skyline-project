@@ -1,0 +1,53 @@
+{% include 'uhead.html'%}
+	<center><h1>View Patient Details</h1></center>
+<body>
+
+
+<div class="container text-dark">
+ <table class="table" border="1">
+    <thead class="thead-dark">
+      <tr>
+          <th>Image</th>
+        <th> Id</th>
+              <th> Patient Name</th>
+			<th>Email </th>
+			<th>Phone </th>
+          <th>address </th>
+          <th>DOB </th>
+          <th>Hospital Name </th>
+<th>Blood Group </th>
+          <th>Disease </th>
+          <th>Disease Sympton </th>
+          <th>Age </th>
+          <th>View Data</th>
+        </thead>
+</div>
+{% for user in pdel %}
+
+	<tbody>
+		<tr>
+            <td><img height="50" src=" {{url_for('send_image', filename=user[11])}}" ></td>
+
+		   <td>{{user[0]}}</td>
+		   <td>{{user[1]}}</td>
+			<td>{{user[2]}}</td>
+			<td>{{user[3]}}</td>
+            <td>{{user[4]}}</td>
+           <td>{{user[5]}}</td>
+               <td>{{user[6]}}</td>
+            <td>{{user[7]}}</td>
+               <td>{{user[8]}}</td>
+               <td>{{user[9]}}</td>
+                           <td>{{user[10]}}</td>
+            <td><a href="/download?id={{user[0]}}"><button>View Patient report</button></a> </td>
+
+
+
+		</tr>
+	</tbody>
+
+  {% endfor %}
+
+
+</table>
+</center>

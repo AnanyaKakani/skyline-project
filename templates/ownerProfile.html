@@ -1,0 +1,47 @@
+{% include 'ohead.html'%}
+	<center><h1>View Owner Details</h1></center>
+<body>
+
+
+<div class="container text-dark">
+ <table class="table" border="1">
+    <thead class="thead-dark">
+      <tr>
+          <th>Image</th>
+        <th>User Id</th>
+              <th> Name</th>
+<th>User name</th>
+			<th>Email </th>
+			<th>Phone </th>
+
+          <th>Status</th>
+        </thead>
+</div>
+{% for user in details %}
+
+	<tbody>
+		<tr>
+            <td><img height="70" src=" {{url_for('send_image', filename=user[6])}}" ></td>
+
+		   <td>{{user[0]}}</td>
+		   <td>{{user[1]}}</td>
+			<td>{{user[2]}}</td>
+			<td>{{user[3]}}</td>
+<td>{{user[5]}}</td>
+           <td>{{user[7]}}</td>
+
+
+
+
+
+
+
+
+		</tr>
+	</tbody>
+
+  {% endfor %}
+
+
+</table>
+</center>

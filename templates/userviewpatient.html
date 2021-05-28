@@ -1,0 +1,35 @@
+{% include 'uhead.html'%}
+	<center><h1>View Patient Details</h1></center>
+<body>
+
+
+<div class="container text-dark">
+ <table class="table" border="1">
+    <thead class="thead-dark">
+      <tr>
+
+              <th> Patient Name</th>
+
+          <th>Request</th>
+        </thead>
+</div>
+{% for user in userDetails %}
+
+	<tbody>
+		<tr>
+
+
+		   <td>{{user[1]}}</td>
+
+            <td><a href="/request?id={{user[0]}}&pname={{user[1]}}&ownername={{user[14]}}"><button>Request</button></a> </td>
+
+
+
+		</tr>
+	</tbody>
+
+  {% endfor %}
+
+
+</table>
+</center>
